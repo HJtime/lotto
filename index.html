@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로또</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+</head>
+<body>
+    <section class="lotto">
+        <div class="number">
+            <div class="number__container">
+                <div class="number__categories">
+                    <div class="category_btn">
+                        <h3>혼합선택</h3>
+                        <span>원하시는 번호를 직접 입력 또는 자동ㅇ로 구매할 수 있습니다.</span>
+                    </div>
+                    <div class="category_btn">
+                        <h3>자동번호발급</h3>
+                        <span>구매 수량 전체를 자동 번호로 발급 받을 수 있습니다.</span>
+                    </div>
+                    <div class="category_btn">
+                        <h3>직전회차번호</h3>
+                        <span>지난회차 구매한 최근 5게임 번호를 선택할 수 있습니다.</span>
+                    </div>
+                    <div class="category_btn">
+                        <h3>나의로또번호</h3>
+                        <span>저장한 나의 로또번호에서 선택해서 구매할 수 있습니다.</span>
+                    </div>
+                </div>
+                <div class="number__choice">
+                    <div class="number__box">
+                        <div class="money">
+                            <div><span>1,000원</span></div>
+                        </div>
+                        <div class="numberlist">
+                            <button class="num" data-number="1">1</button>
+                            <button class="num" data-number="2">3</button>
+                            <button class="num" data-number="3">3</button>
+                            <button class="num" data-number="4">4</button>
+                            <button class="num" data-number="5">5</button>
+                            <button class="num" data-number="6">6</button>
+                            <button class="num" data-number="7">7</button>
+                        </div>
+                        <div class="menu">
+                            <button class="reset">초기화</button>
+                            <button class="auto">자동선택</button>
+                            <button class="mynum">나의번호등록</button>
+                        </div>
+                    </div>
+                    <div class="number__count">
+                        <span>적용수량</span>
+                        <select name="count" id="count-select">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                        <button class="check">확인</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="choice">
+            <div class="choice__top">
+                <span>선택번호확인</span>
+                <button class="reset">초기화</button>
+            </div>
+            <div class="choice__number">
+                <ul>
+                    <li>
+                        <span>A 수동</span>
+                        <div class="choice__num">
+                            <span>2</span>
+                            <span>9</span>
+                            <span>10</span>
+                            <span>17</span>
+                            <span>25</span>
+                            <span>33</span>
+                        </div>
+                        <div class="choice__menu">
+                            <button class="modify">수정</button>
+                            <button class="delete">삭제</button>
+                            <button class="copy">번호복사</button>
+                        </div>
+                    </li>
+                    <li>
+                        <span>A 수동</span>
+                        <div class="choice__num">
+                            <div class="circle"></div>
+                            <div class="circle"></div>
+                            <div class="circle"></div>
+                            <div class="circle"></div>
+                            <div class="circle"></div>
+                            <div class="circle"></div>
+                        </div>
+                        <div class="choice__menu">
+                            <button class="modify">수정</button>
+                            <button class="delete">삭제</button>
+                            <button class="copy">번호복사</button>
+                        </div>
+                    </li>
+                    <li>
+                        <span>A 수동</span>
+                        <div class="choice__num">
+                            <div class="circle"></div>
+                            <div class="circle"></div>
+                            <div class="circle"></div>
+                            <div class="circle"></div>
+                            <div class="circle"></div>
+                            <div class="circle"></div>
+                        </div>
+                        <div class="choice__menu">
+                            <button class="modify">수정</button>
+                            <button class="delete">삭제</button>
+                            <button class="copy">번호복사</button>
+                        </div>
+                    </li>
+                    <li>
+                        <span>A 수동</span>
+                        <div class="choice__num">
+                            <div class="circle"></div>
+                            <div class="circle"></div>
+                            <div class="circle"></div>
+                            <div class="circle"></div>
+                            <div class="circle"></div>
+                            <div class="circle"></div>
+                        </div>
+                        <div class="choice__menu">
+                            <button class="modify">수정</button>
+                            <button class="delete">삭제</button>
+                            <button class="copy">번호복사</button>
+                        </div>
+                    </li>
+                    <li>
+                        <span>A 수동</span>
+                        <div class="choice__num">
+                            <div class="circle"></div>
+                            <div class="circle"></div>
+                            <div class="circle"></div>
+                            <div class="circle"></div>
+                            <div class="circle"></div>
+                            <div class="circle"></div>
+                        </div>
+                        <div class="choice__menu">
+                            <button class="modify">수정</button>
+                            <button class="delete">삭제</button>
+                            <button class="copy">번호복사</button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="choice__bottom">
+                <div class="choice__balance">
+                    <span>보유예치금</span>
+                    <span class="balance">2,000원</span>
+                </div>
+                <div class="choice__money">
+                    <span>결제금액</span>
+                    <span class="money">1,000원</span>
+                </div>
+                <div class="choice__pay">
+                    <button>구매하기</button>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
