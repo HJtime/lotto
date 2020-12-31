@@ -1,0 +1,324 @@
+:root{
+    --color-black: #000000;
+    --color-white: #ffffff;
+    --color-grey: #b9b9b9;
+    --color-dark-grey: #525252;
+    --color-light-grey: #eeeeee;
+    --color-red: #eb164b;
+    --color-pink: #F15F5F;
+    --color-light-pink: #FFA7A7;
+    --color-deep-blue: #0054FF;
+    --color-blue: #4374D9;
+
+    --font-samll: 13px;
+    --font-medium: 25px;
+
+    --spacing-micro: 7px;
+    --spacing-medium: 20px;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Nanum Gothic', sans-serif;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+    color: var(--color-black);
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+}
+
+li{
+    list-style: none;
+}
+
+h1, h3, h4{
+    margin: 0;
+}
+
+button{
+    outline: none;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    padding: 0;
+}
+
+section{
+    width: 1000px;
+    height: 500px;
+    display: flex;
+    justify-content: space-between;
+    padding: var(--spacing-medium);
+    margin: 180px auto;
+    background-color: var(--color-dark-grey);
+}
+
+.number{
+    width: 50%;
+    height: 100%;
+    border: 3px solid var(--color-red);
+    background-color: var(--color-white);
+}
+
+.number__container{
+    display: flex;
+}
+
+/* 버튼 */
+.number__categories{
+    width: 40%;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: var(--color-light-grey);
+    border-right: 1px solid var(--color-dark-grey);
+}
+
+.category_btn{
+    width: 140px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-size: var(--font-samll);
+    margin: var(--spacing-micro) auto;
+    padding: var(--spacing-micro);
+    border: 1px solid var(--color-grey);
+    border-radius: 5px;
+    background: linear-gradient(#ffffff, #EAEAEA);
+    cursor: pointer;
+}
+
+.category_btn.active{
+    border-radius: 5px;
+    background: var(--color-pink);
+    color: var(--color-white);
+}
+
+/* 번호판 div */
+.number__choice{
+    width: 60%;
+    height: 500px;
+    text-align: center;
+    padding: var(--spacing-medium);
+}
+
+.number__box{
+    width: 100%;
+    height: 80%;
+    border: 1px solid var(--color-light-pink);
+}
+
+.number__box .money{
+    height: 50px;
+    border-bottom: 1px solid var(--color-light-pink);
+}
+
+.number__box .money div{
+    width: 80%;
+    height: 100%;
+    margin-left: 20%;
+    color: var(--color-white);
+    font-size: var(--font-medium);
+    line-height: 50px;
+    background-color: var(--color-pink);
+}
+
+.numberlist{
+    height: 270px;
+    padding: var(--spacing-medium) var(--spacing-micro);
+}/***번호 리스트***/
+
+.numberlist .num{
+    width: 30px;
+    height: 30px;
+    color: var(--color-pink);
+    border: 1px solid var(--color-light-pink);
+    margin-bottom: var(--spacing-micro);
+}
+
+.numberlist .num.active{
+    color: var(--color-white);
+    border: 1px solid var(--color-dark-grey);
+    background-color: var(--color-dark-grey);
+    margin-bottom: var(--spacing-micro);
+}
+
+.number__box .menu{
+    display: flex;
+    justify-content: space-evenly;
+}/**번호판 하단 메뉴**/
+
+.number__box .menu button{
+    color: var(--color-pink);
+}
+
+/* 적용수량 div */
+.number__count{
+    margin-top: var(--spacing-medium);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#count-select{
+    width: 80px;
+    height: 30px;
+    background: linear-gradient(#ffffff, #EAEAEA);
+}
+
+.number__count .check{
+    width: 60px;
+    height: 30px;
+    color: var(--color-white);
+    background-color: var(--color-dark-grey);
+    border: 2px solid var(--color-black);
+    border-radius: 5px;
+}
+
+/* choice */
+.choice{
+    width: 50%;
+    height: 100%;
+    border: 3px solid var(--color-blue);
+    background-color: var(--color-white);
+    margin-left: var(--spacing-medium);
+}
+
+/* top bar */
+.choice__top{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--color-grey);
+    box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.1);
+}
+
+.choice__top span{
+    font-weight: bold;
+    margin-left: var(--spacing-medium);
+}
+
+.choice__top .reset{
+    width: 80px;
+    height: 35px;
+    color: var(--color-white);
+    background-color: var(--color-dark-grey);
+    border: 2px solid var(--color-black);
+    border-radius: 5px;
+    margin-right: var(--spacing-medium);
+}
+
+/* 선택한 번호 목록 */
+.choice__number{
+    height: 325px;
+    padding: var(--spacing-micro) var(--spacing-medium) 0 var(--spacing-medium);
+}
+
+.choice__number ul li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-micro);
+    border-bottom: 1px dotted var(--color-light-grey);
+}
+
+.choice__number ul li span{
+    font-size: 15px;
+    width: 60px;
+}
+
+.choice__num{
+    width: 250px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.choice__num .circle{
+    width: 30px;
+    height: 30px;
+    background-color: var(--color-light-grey);
+    border-radius: 50%;
+    margin-right: 2px;
+}
+
+/* 수정 삭제 복사 */
+.choice__menu{
+    display: flex;
+}
+
+.choice__menu button{
+    width: 40px;
+    height: 25px;
+    background: linear-gradient(#ffffff, #EAEAEA);
+    border: 1px solid var(--color-light-grey);
+    border-radius: 2px;
+    margin-right: 2px;
+}
+
+.choice__menu .copy{
+    width: 60px;
+}
+
+.choice__bottom{
+    height: 67px;
+    display: flex;
+    justify-content: space-around;
+    padding: var(--spacing-medium) var(--spacing-micro);
+    background-color: var(--color-light-grey);
+}
+
+.choice__bottom .choice__balance{
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: var(--color-dark-grey);
+    border-right: 1px solid var(--color-grey);
+}
+
+.choice__balance .balance{
+    color: var(--color-black);
+    font-weight: bold;
+    margin-top: var(--spacing-micro);
+}
+
+/* bottom */
+.choice__bottom .choice__money{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.choice__money .money{
+    color: orangered;
+    font-size: var(--font-medium);
+    font-weight: bold;
+    margin-top: var(--spacing-micro);
+}
+
+.choice__bottom .choice__pay button{
+    width: 100px;
+    height: 65px;
+    font-size: 15px;
+    font-weight: bold;
+    background-color: var(--color-blue);
+    color: var(--color-white);
+    border: 1px solid var(--color-deep-blue);
+    border-radius: 5px;
+    box-shadow: 2px 2px 3px 1px rgba(0, 0, 0, 0.2);
+    padding: var(--spacing-micro);
+}
