@@ -20,6 +20,14 @@ buttonContainer.addEventListener('click', (event)=>{
     target.classList.add('active');
 });
 
+// 혼합선택 버튼
+const selectBtn=document.querySelector('#select');
+const popup=document.querySelector('.pop-up');
+
+selectBtn.addEventListener('click',()=>{
+    popup.classList.add('visible');
+})
+
 // 번호 버튼 선택
 let count=1;
 let lineCount=1;
@@ -59,6 +67,9 @@ let j=0;
 let num;
 
 autoBtn.addEventListener('click',()=>{
+    popup.classList.remove('visible');
+    numClear();
+
     let i=0;
     console.log(lineCount);
 
