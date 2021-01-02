@@ -88,6 +88,27 @@ function numClear(){
     console.log(result);
 }
 
+// 선택 번호판 리셋 버튼(우측)
+const choiceResetBtn=document.querySelector('.choice__top .reset');
+
+choiceResetBtn.addEventListener('click', ()=>{
+    choiceClear();
+})
+
+function choiceClear(){
+    const choicenum=document.querySelectorAll('.choicenum');
+    const circle=document.querySelectorAll('.circle');
+
+    console.log(choicenum.length);
+
+    for(let i=0; i<choicenum.length; i++){
+        choicenum[i].remove();
+        circle[i].style.background='#eeeeee';
+    }
+
+    lineCount=1;
+}
+
 // 숫자 출력
 function numPrint(){
     const circle=document.querySelectorAll(`.choice__num[data-line="${lineCount}"] .circle`); //라인번호
