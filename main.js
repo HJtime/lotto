@@ -172,6 +172,7 @@ function choiceClear(){
 
     lineCount=1;
     autoCount=1;
+    moneyChange();
 }
 
 // 라인 삭제
@@ -197,6 +198,7 @@ miniMenu.addEventListener('click',(event)=>{
     count--;
     autoCount--;
     lineCount--;
+    moneyChange();
 })
 
 // 숫자 출력
