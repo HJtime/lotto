@@ -231,6 +231,7 @@ section{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    text-align: center;
     padding: var(--spacing-micro);
     border-bottom: 1px dotted var(--color-light-grey);
 }
@@ -238,6 +239,13 @@ section{
 .choice__number ul li span{
     font-size: 15px;
     width: 60px;
+}
+
+.choicenum{
+    font-size: 13px;
+    line-height: 30px;
+    font-weight: bold;
+    color: var(--color-white);
 }
 
 .choice__num{
