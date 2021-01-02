@@ -62,8 +62,31 @@ submitBtn.addEventListener('click', ()=>{
         alert('번호 6개를 선택하십시오.');
     }else{
         numPrint();
+        numClear();
     }
 })
+
+// 번호판 초기화 버튼(좌측)
+const numResetBtn=document.querySelector('.menu .reset');
+const nums=document.querySelectorAll('.num');
+
+numResetBtn.addEventListener('click', ()=>{
+    numClear();
+})
+
+function numClear(){
+    count=1;
+    i=0;
+
+    for(let i=0; i<6; i++){
+        result[i]=0;
+    }
+
+    for(let i=0; i<45; i++){
+        nums[i].classList.remove('active');
+    }
+    console.log(result);
+}
 
 // 숫자 출력
 function numPrint(){
