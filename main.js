@@ -50,8 +50,6 @@ numberBox.addEventListener('click', (event)=>{
 
     i++;
     count++;
-
-    console.log(result);
 })
 
 // 번호 랜덤 생성
@@ -62,6 +60,7 @@ let num;
 
 autoBtn.addEventListener('click',()=>{
     let i=0;
+    console.log(lineCount);
 
     if(autoCount>5 || lineCount>5){
         alert('더이상 추가할 수 없습니다.');
@@ -127,14 +126,16 @@ function choiceClear(){
     const choicenum=document.querySelectorAll('.choicenum');
     const circle=document.querySelectorAll('.circle');
 
-    console.log(choicenum.length);
-
     for(let i=0; i<choicenum.length; i++){
         choicenum[i].remove();
+    }
+
+    for(let i=0; i<circle.length; i++){
         circle[i].style.background='#eeeeee';
     }
 
     lineCount=1;
+    autoCount=1;
 }
 
 // 라인 삭제
