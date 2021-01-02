@@ -71,7 +71,6 @@ autoBtn.addEventListener('click',()=>{
     numClear();
 
     let i=0;
-    console.log(lineCount);
 
     if(autoCount>5 || lineCount>5){
         alert('더이상 추가할 수 없습니다.');
@@ -100,7 +99,6 @@ let amount=1;
 
 select.addEventListener('change',()=>{
     const selectValue=select.options[select.selectedIndex].value;
-    console.log(selectValue);
     countTxt.textContent=`${selectValue},000원`;
     amount=selectValue;
 })
@@ -110,6 +108,16 @@ const moneyTxt=document.querySelector('.choice__money .money');
 
 function moneyChange(){
     moneyTxt.textContent=`${lineCount-1},000원`;
+}
+
+// 예치금
+const balance=document.querySelector('.balance');
+const balanceMoney=5
+balance.textContent=`${balanceMoney},000원`;
+
+function balanceMinus(){
+    balance.textContent=`${balanceMoney-(lineCount-1)},000원`;
+    console.log(balanceMoney);
 }
 
 // 확인 버튼
@@ -136,6 +144,8 @@ payBtn.addEventListener('click', ()=>{
 
     if(checkConfirm===true){
         alert('구매가 완료되었습니다.');
+        balanceMinus();
+        console.log(lineCount);
         choiceClear();
     }else{
         alert('구매가 취소되었습니다.');
@@ -161,7 +171,6 @@ function numClear(){
     for(let i=0; i<45; i++){
         nums[i].classList.remove('active');
     }
-    console.log(result);
 }
 
 // 선택 번호판 리셋 버튼(우측)
@@ -208,7 +217,7 @@ miniMenu.addEventListener('click',(event)=>{
         }
     }
 
-    count--;
+    count=1;
     autoCount--;
     lineCount--;
     moneyChange();

@@ -58,6 +58,7 @@ section{
     padding: var(--spacing-medium);
     margin: 180px auto;
     background-color: var(--color-dark-grey);
+    user-select: none;
 }
 
 .number{
