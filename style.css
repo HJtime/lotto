@@ -135,6 +135,7 @@ section{
 .numberlist{
     height: 270px;
     padding: var(--spacing-medium) var(--spacing-micro);
+    text-align: left;
 }/***번호 리스트***/
 
 .numberlist .num{
@@ -143,6 +144,7 @@ section{
     color: var(--color-pink);
     border: 1px solid var(--color-light-pink);
     margin-bottom: var(--spacing-micro);
+    margin-right: 4px;
 }
 
 .numberlist .num.active{
