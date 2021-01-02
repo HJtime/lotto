@@ -137,6 +137,31 @@ function choiceClear(){
     lineCount=1;
 }
 
+// 라인 삭제
+const miniMenu=document.querySelector('.choice__number');
+
+miniMenu.addEventListener('click',(event)=>{
+    const id=event.target.className==='delete'? event.target.dataset.id : event.target.parentNode.dataset.id;
+
+    if(id===undefined||id===null){
+        return;
+    }
+
+    if(id){
+        const choicenum=document.querySelectorAll(`.choice__num[data-line="${id}"] .choicenum`);
+        const romoveCircle=document.querySelectorAll(`.choice__num[data-line="${id}"] .circle`);
+    
+        for(let i=0; i<6; i++){
+            choicenum[i].remove();
+            romoveCircle[i].style.background='#eeeeee';
+        }
+    }
+
+    count--;
+    autoCount--;
+    lineCount--;
+})
+
 // 숫자 출력
 function numPrint(){
     const circle=document.querySelectorAll(`.choice__num[data-line="${lineCount}"] .circle`); //라인번호
