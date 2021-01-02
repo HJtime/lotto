@@ -129,6 +129,19 @@ submitBtn.addEventListener('click', ()=>{
     }
 })
 
+// 구매하기 버튼
+const payBtn=document.querySelector('.choice__pay button');
+payBtn.addEventListener('click', ()=>{
+    const checkConfirm=confirm('구매하시겠습니까?');
+
+    if(checkConfirm===true){
+        alert('구매가 완료되었습니다.');
+        choiceClear();
+    }else{
+        alert('구매가 취소되었습니다.');
+    }
+})
+
 // 번호판 초기화 버튼(좌측)
 const numResetBtn=document.querySelector('.menu .reset');
 const nums=document.querySelectorAll('.num');
