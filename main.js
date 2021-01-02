@@ -81,6 +81,18 @@ autoBtn.addEventListener('click',()=>{
     autoCount++;
 })
 
+// 수량 변경(텍스트)
+const select=document.querySelector('#count-select');
+const countTxt=document.querySelector('.number__box .money span');
+let amount=1;
+
+select.addEventListener('change',()=>{
+    const selectValue=select.options[select.selectedIndex].value;
+    console.log(selectValue);
+    countTxt.textContent=`${selectValue},000원`;
+    amount=selectValue;
+})
+
 // 확인 버튼
 const submitBtn=document.querySelector('.number__count .check');
 
@@ -88,7 +100,11 @@ submitBtn.addEventListener('click', ()=>{
     if(count<6){
         alert('번호 6개를 선택하십시오.');
     }else{
-        numPrint();
+        let i=0;
+        while(i<amount){
+            numPrint();
+            i++;
+        }
         numClear();
     }
 })
