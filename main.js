@@ -78,6 +78,7 @@ autoBtn.addEventListener('click',()=>{
     }while(i<6)
     
     numPrint();
+    moneyChange();
     autoCount++;
 })
 
@@ -93,6 +94,13 @@ select.addEventListener('change',()=>{
     amount=selectValue;
 })
 
+// 금액 변경
+const moneyTxt=document.querySelector('.choice__money .money');
+
+function moneyChange(){
+    moneyTxt.textContent=`${lineCount-1},000원`;
+}
+
 // 확인 버튼
 const submitBtn=document.querySelector('.number__count .check');
 
@@ -106,6 +114,7 @@ submitBtn.addEventListener('click', ()=>{
             i++;
         }
         numClear();
+        moneyChange();
     }
 })
 
