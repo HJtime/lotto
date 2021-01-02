@@ -54,6 +54,34 @@ numberBox.addEventListener('click', (event)=>{
     console.log(result);
 })
 
+// 번호 랜덤 생성
+const autoBtn=document.querySelector('#auto');
+let autoCount=1;
+let j=0;
+let num;
+
+autoBtn.addEventListener('click',()=>{
+    let i=0;
+
+    if(autoCount>5 || lineCount>5){
+        alert('더이상 추가할 수 없습니다.');
+        return;
+    }
+
+    do{
+        num=Math.floor(Math.random()*45)+1;
+        for(j=0; j<=i; j++){
+            if(num==result[j])break; //결과 배열에 이미 저장된 숫자인지 체크
+        }
+        if(j<i) continue;
+        result[i]=num; //결과 배열에 랜덤 값 저장
+        i++;
+    }while(i<6)
+    
+    numPrint();
+    autoCount++;
+})
+
 // 확인 버튼
 const submitBtn=document.querySelector('.number__count .check');
 
