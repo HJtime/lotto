@@ -16,5 +16,6 @@
 ## 실행 화면
 1. 메인 화면
 <img src="https://user-images.githubusercontent.com/72139168/106561316-cbcc4500-656b-11eb-8d89-8bd5c8d68588.PNG" width="700" height="370">
+2. 번호 선택 화면
+<img src="https://user-images.githubusercontent.com/72139168/106561430-fe763d80-656b-11eb-915b-389a39ff03a6.PNG" width="700" height="370">
 
- 
